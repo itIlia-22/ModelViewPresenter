@@ -19,13 +19,13 @@ class MainActivity : AppCompatActivity(), MainView {
         setContentView(binding.root)
 
         binding.btnOne.setOnClickListener {
-            presenter.ClickBtnOne()
+            presenter.clickBtnOne()
         }
         binding.btnTwo.setOnClickListener {
-            presenter.ClickBtnTwo()
+            presenter.clickBtnTwo()
         }
         binding.btnThree.setOnClickListener {
-            presenter.ClickBtnThree()
+            presenter.clickBtnThree()
         }
 
 
