@@ -7,11 +7,13 @@ import com.example.modelviewpresenter.utils.KEY_STATE
 import com.example.modelviewpresenter.utils.ONE_P
 import com.example.modelviewpresenter.utils.Two_P
 import com.example.modelviewpresenter.utils.ZERO_P
+import moxy.MvpAppCompatActivity
+import moxy.ktx.moxyPresenter
 
-class MainActivity : AppCompatActivity(), MainView {
+class MainActivity : MvpAppCompatActivity(), MainView {
     private lateinit var binding: ActivityMainBinding
     private val model by lazy { CountersModel() }
-    private val presenter = CountersPresenter(this)
+    private val presenter by moxyPresenter { CountersPresenter(model) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +32,6 @@ class MainActivity : AppCompatActivity(), MainView {
 
 
     }
-
 
 
     override fun setTextOne(counter: String) {
