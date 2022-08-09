@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -38,6 +39,8 @@ android {
 }
 
 dependencies {
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     //Moxy
     implementation "com.github.moxy-community:moxy:2.2.2"
     implementation "com.github.moxy-community:moxy-ktx:2.2.2"
