@@ -31,32 +31,18 @@ class MainActivity : AppCompatActivity(), MainView {
 
     }
 
-    override fun setText(counter: String, id: Int) {
-        when (id) {
-            ZERO_P -> binding.textOne.text = counter
-            ONE_P -> binding.textTwo.text = counter
-            Two_P -> binding.textThree.text = counter
-        }
 
+
+    override fun setTextOne(counter: String) {
+        binding.textOne.text = counter
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putIntArray(KEY_STATE, model.counters.toIntArray())
+    override fun setTextTwo(counter: String) {
+        binding.textTwo.text = counter
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        val array = savedInstanceState.getIntArray(KEY_STATE)
-        model.counters.let { list ->
-            list.clear()
-            array?.toList()?.let {
-                list.addAll(it)
-
-            }
-
-        }
-
+    override fun setTextThree(counter: String) {
+        binding.textThree.text = counter
     }
 
 

@@ -1,7 +1,9 @@
 package com.example.modelviewpresenter
 
 interface MainView {
-    fun setText(counter: String, id: Int)
+    fun setTextOne(counter: String)
+    fun setTextTwo(counter: String)
+    fun setTextThree(counter: String)
 
 
 }
