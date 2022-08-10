@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvP">16dp</dimen>
+    <dimen name="tvtvP">16dp</dimen>
+    <dimen name="size_tv">25sp</dimen>
+    <dimen name="topR">16dp</dimen>
+    <dimen name="botR">16dp</dimen>
+    <dimen name="www">30sp</dimen>
+</resources>

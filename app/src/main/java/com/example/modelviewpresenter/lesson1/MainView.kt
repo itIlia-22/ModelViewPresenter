@@ -1,4 +1,4 @@
-package com.example.modelviewpresenter
+package com.example.modelviewpresenter.lesson1
 
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy

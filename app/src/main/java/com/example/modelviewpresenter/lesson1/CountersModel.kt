@@ -1,4 +1,4 @@
-package com.example.modelviewpresenter
+package com.example.modelviewpresenter.lesson1
 
 import com.example.modelviewpresenter.utils.ONE_DATA
 import com.example.modelviewpresenter.utils.TWO_DATA

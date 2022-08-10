@@ -1,10 +1,9 @@
-package com.example.modelviewpresenter
+package com.example.modelviewpresenter.lesson1
 
-import androidx.constraintlayout.motion.utils.ViewState
 import com.example.modelviewpresenter.utils.*
 import moxy.MvpPresenter
 
-class CountersPresenter(
+class CounterssPresenter(
     private val model: CountersModel,
 ) : MvpPresenter<MainView>() {
 

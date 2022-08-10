@@ -1,8 +1,9 @@
-package com.example.modelviewpresenter.lesson2.repo
+package com.example.modelviewpresenter.lesson2.repo.impl
 
 import com.example.modelviewpresenter.lesson2.model.GithubUser
+import com.example.modelviewpresenter.lesson2.view.GithubRepo
 
-class GithubUserRepo {
+class GithubUserRepoImpl:GithubRepo {
     private val repo = listOf(
         GithubUser("Vovka"),
         GithubUser("Alisa"),
@@ -11,7 +12,8 @@ class GithubUserRepo {
         GithubUser("Moscow")
     )
 
-    fun getUser():List<GithubUser>{
+
+    override fun getUsers(): List<GithubUser> {
         return repo
     }
 }
