@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.modelviewpresenter.R
+import com.example.modelviewpresenter.lesson2.core.BackPressedListener
 import com.example.modelviewpresenter.lesson2.model.GithubUser
 
 class AdapterUser() :
@@ -40,6 +41,7 @@ class GithubUserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(item: GithubUser) = with(item) {
         uLogin.text = login
+
     }
 
 }
