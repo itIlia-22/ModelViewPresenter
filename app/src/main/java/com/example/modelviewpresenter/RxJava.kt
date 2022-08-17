@@ -1,9 +1,6 @@
 package com.example.modelviewpresenter
 
-import com.example.modelviewpresenter.lesson2.repo.impl.GithubUserRepoImpl
 import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.core.Observer
-import io.reactivex.rxjava3.disposables.Disposable
 
 
 private val data = listOf(1, 3, 41, 23, 434, 55, 59)
@@ -64,14 +61,15 @@ Kод, если нужно старый код или проект быстро 
         //кол-во узказанных элементов скрываюся, то есть скипуются  .skip(2)
         // map - частое явление и увеличивает(+.*) и уменьшает(/.-)
         //можно менять тип
-        .map {
-            it.toString()
-        }
+        .map(::AddMapTest)
         .subscribe {
-            println(it + 4)
+            println(it )
         }
 
 
+}
+private fun AddMapTest(value: Int):List<Int>{
+    return listOf(value,8)
 }
 
 
