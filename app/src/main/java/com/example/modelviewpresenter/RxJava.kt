@@ -6,14 +6,17 @@ import io.reactivex.rxjava3.core.Observable
 private val data = listOf(1, 3, 41, 23, 434, 55, 59, 59, 1, 3)
 fun main() {
 
-    val nameObservable = Observable.just("Oleg","Slava","Yn")
-    val mailObservable = Observable.just("Oleg.mail.ru","Slava.com98")
-        //Слияние через zip 2 потоков
-    Observable.zip(nameObservable,mailObservable){name,mail ->
+    val nameObservable = Observable.just("Oleg", "Slava", "Yn")
+    //val mailObservable = Observable.just("Oleg.mail.ru", "Slava.com98")
+
+    /*Слияние через zip 2 потоков
+     Observable.zip(nameObservable,mailObservable){name,mail ->
         return@zip "$name : $mail"
     }.subscribe{
         println(it)
     }
+     */
+
 
 /* Учебный код 1
   val observer = object : Observer<Int> {
@@ -97,8 +100,18 @@ Kод, если нужно старый код или проект быстро 
         }
  */
 
+    nameObservable.flatMap { element ->
+        return@flatMap infoUser(element)
+
+    }.subscribe{
+        println(it)
+    }
 
 
+}
+
+private fun infoUser(name: String): Observable<List<String>>{
+    return Observable.just(listOf(name,"mail.ru"))
 }
 
 private fun AddMapTest(value: Int): List<Int> {
