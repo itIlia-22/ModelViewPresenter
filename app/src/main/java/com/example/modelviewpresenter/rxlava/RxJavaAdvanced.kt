@@ -21,4 +21,4 @@ fun main() {
 
 fun createHotObs(): ConnectableObservable<Int> =
     Observable.just(12, 312, 13, 12)
-        .publish()
+        .replay()
